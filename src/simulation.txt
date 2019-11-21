@@ -1,11 +1,9 @@
-25
-Baloon B1 2 3 20
-Baloon B2 1 8 66
-JetPlane J1 23 44 32
-Helicopter H1 654 33 20
-Helicopter H2 22 33 44
-Helicopter H3 98 68 99
-Baloon B3 102 22 34
-JetPlane J2 11 99 768
-Helicopter H4 223 23 54
-
+Tower says: Baloon#B1(1) registered to weather tower.
+Tower says: Baloon#B2(2) registered to weather tower.
+Tower says: JetPlane#J1(3) registered to weather tower.
+Tower says: Helicopter#H1(4) registered to weather tower.
+Tower says: Helicopter#H2(5) registered to weather tower.
+Tower says: Helicopter#H3(6) registered to weather tower.
+Tower says: Baloon#B3(7) registered to weather tower.
+Tower says: JetPlane#J2(8) registered to weather tower.
+Tower says: Helicopter#H4(9) registered to weather tower.

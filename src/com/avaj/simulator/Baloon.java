@@ -16,6 +16,8 @@ public class Baloon extends Aircraft implements Flyable {
 
     public void registerTower(WeatherTower weatherTower) {
         System.out.println("Tower says: Baloon#" + _name + "(" + _id + ") registered to weather tower.");
+        Simulator.printWriter.println("Tower says: Baloon#" + _name + "(" + _id + ") registered to weather tower.");
+
     }
 
 }
