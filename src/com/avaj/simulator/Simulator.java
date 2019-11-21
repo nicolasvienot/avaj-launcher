@@ -32,7 +32,6 @@ public class Simulator {
 			String documents[];
 			documents = readAllLines(reader).split("\n");
 			int nbsimu = Integer.parseInt(documents[0]);
-			// System.out.println("Number of simulations : " + nbsimu);
 			WeatherTower weatherTower = new WeatherTower();
 			for (String doc : documents) {
 				if (doc.equals(documents[0]))
@@ -43,7 +42,9 @@ public class Simulator {
 				test.registerTower(weatherTower);
 			}
 		} catch (Exception e) {
-			System.out.println("There was an error : " + e);
+			System.out.println(
+					"There was an error with the file, please check that it exists and that it is well formated. Error : "
+							+ e);
 			return;
 		}
 		if (printWriter != null)
