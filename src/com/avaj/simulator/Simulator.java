@@ -2,9 +2,11 @@ package com.avaj.simulator;
 
 import java.io.PrintWriter;
 import java.io.*;
+import java.util.*;
 
 public class Simulator {
 	public static PrintWriter printWriter;
+	// private static List<Flyable> flyables = new ArrayList<Flyable>();
 
 	private static String readAllLines(BufferedReader reader) throws IOException {
 		StringBuilder content = new StringBuilder();
@@ -39,7 +41,19 @@ public class Simulator {
 				Flyable test = AircraftFactory.newAircraft(doc.split(" ")[0], doc.split(" ")[1],
 						Integer.parseInt(doc.split(" ")[2]), Integer.parseInt(doc.split(" ")[3]),
 						Integer.parseInt(doc.split(" ")[4]));
+				// flyables.add(test);
+				// // weatherTower.register(test);
 				test.registerTower(weatherTower);
+			}
+			// for (Flyable flyable : flyables) {
+			// System.out.println("LOL");
+			// flyable.registerTower(weatherTower);
+			// weatherTower.register(flyable);
+			// }
+			while (nbsimu > 0) {
+				weatherTower.changeWeather();
+				System.out.println("Simulation nb : " + nbsimu);
+				nbsimu--;
 			}
 		} catch (Exception e) {
 			System.out.println(
