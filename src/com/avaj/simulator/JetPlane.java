@@ -11,7 +11,36 @@ public class JetPlane extends Aircraft implements Flyable {
 	}
 
 	public void updateConditions() {
-		System.out.println("JetPlanerrr");
+		String weather = _weatherTower.getWeather(_coordinates);
+		switch (weather) {
+		case "RAIN":
+			System.out.println("JetPlane#" + _name + "(" + _id + "): It's raining!");
+			_coordinates = new Coordinates(_coordinates.getLatitude() + 5, _coordinates.getLongitude(),
+					_coordinates.getHeight());
+			break;
+		case "FOG":
+			System.out.println("JetPlane#" + _name + "(" + _id + "): What the hell is that fog?");
+			_coordinates = new Coordinates(_coordinates.getLatitude() + 1, _coordinates.getLongitude(),
+					_coordinates.getHeight());
+			break;
+		case "SUN":
+			System.out.println("JetPlane#" + _name + "(" + _id + "): What a beaufiful sun!");
+			_coordinates = new Coordinates(_coordinates.getLatitude() + 10, _coordinates.getLongitude(),
+					_coordinates.getHeight() + 2);
+			break;
+		case "SNOW":
+			System.out.println("JetPlane#" + _name + "(" + _id + "): It's snowing!");
+			_coordinates = new Coordinates(_coordinates.getLatitude(), _coordinates.getLongitude(),
+					_coordinates.getHeight() - 7);
+			break;
+		default:
+			System.out.println("problem case JetPlane");
+		}
+		if (_coordinates.getHeight() <= 0) {
+			System.out.println("JetPlane#" + _name + "(" + _id + ") landing at latitude " + _coordinates.getLatitude()
+					+ " and longitude " + _coordinates.getLongitude() + ".");
+			_weatherTower.unregister(this);
+		}
 	}
 
 	public void registerTower(WeatherTower weatherTower) {

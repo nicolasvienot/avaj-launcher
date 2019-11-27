@@ -51,8 +51,8 @@ public class Simulator {
 			// weatherTower.register(flyable);
 			// }
 			while (nbsimu > 0) {
+				// System.out.println("Simulation nb : " + nbsimu);
 				weatherTower.changeWeather();
-				System.out.println("Simulation nb : " + nbsimu);
 				nbsimu--;
 			}
 		} catch (Exception e) {
