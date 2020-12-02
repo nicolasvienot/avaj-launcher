@@ -8,6 +8,7 @@ import java.io.PrintWriter;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+
 public class Simulator {
 	public static PrintWriter printWriter;
 
