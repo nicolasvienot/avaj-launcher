@@ -1,7 +1,6 @@
-package com.avaj.simulator;
+package com.avaj.simulator.flyables;
 
-import java.io.PrintWriter;
-import java.io.*;
+import com.avaj.simulator.coordinates.Coordinates;
 
 public class Aircraft {
 	protected long _id;

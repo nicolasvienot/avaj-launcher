@@ -1,7 +1,6 @@
 package com.avaj.simulator;
 
-import java.io.PrintWriter;
-import java.io.*;
+import com.avaj.simulator.flyables.Flyable;
 import java.util.*;
 
 public class Tower {
@@ -16,11 +15,6 @@ public class Tower {
 	}
 
 	protected void conditionsChanged() {
-
-		// for (Flyable fly : observers) {
-		// fly.updateConditions();
-		// }
-
 		for (int i = 0; i < observers.size(); i++) {
 			observers.get(i).updateConditions();
 		}

@@ -1,7 +1,7 @@
-package com.avaj.simulator;
+package com.avaj.simulator.weather;
 
-import java.io.PrintWriter;
-import java.io.*;
+import com.avaj.simulator.coordinates.Coordinates;
+import com.avaj.simulator.Tower;
 
 public class WeatherTower extends Tower {
 	public String getWeather(Coordinates coordinates) {

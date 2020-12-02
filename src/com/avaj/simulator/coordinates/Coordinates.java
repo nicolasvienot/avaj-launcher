@@ -1,14 +1,9 @@
-package com.avaj.simulator;
-
-import java.io.PrintWriter;
-import java.io.*;
+package com.avaj.simulator.coordinates;
 
 public class Coordinates {
     private int _longitude;
     private int _latitude;
     private int _height;
-
-    // public?
 
     public Coordinates(int longitude, int latitude, int height) {
         _longitude = longitude;
