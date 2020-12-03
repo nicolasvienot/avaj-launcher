@@ -5,7 +5,10 @@ import com.avaj.simulator.flyables.Flyable;
 import com.avaj.simulator.errors.NoSuchFileException;
 import com.avaj.simulator.errors.SimulatorException;
 import java.io.PrintWriter;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.File;
+import java.io.FileReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
